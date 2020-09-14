@@ -1,0 +1,97 @@
+include ./mixins/icons/icons.pug
+include ./mixins/soc-list/soc-list.pug
+include ./mixins/aside-link/aside-link.pug
+
+
+doctype html
+html(lang="ru")
+    head
+        include ./templates/head/head.pug
+        
+    body
+        header
+            include ./templates/header/header.pug
+        main
+            .main-slider.js--main-slider
+                div.main-slider__item
+                    img(src="assets/img/main-slider.jpg", alt="")
+                div.main-slider__item
+                    img(src="assets/img/main-slider.jpg", alt="")
+            .container
+                .content-with-aside
+                    div
+                        .main-article
+                            img(src="assets/img/main-article.jpg", alt="")
+                            span.main-article__label Главная новость
+                            .main-article__info
+                                a(href="").main-article__link Принято решение о досрочном сложении полномочий главы Пермского района
+                                .main-article__info-detail
+                                    time(datetime="2001-05-15 23:39").main-article__time Вчера 23:39
+                                    span.main-article__views 
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17.232" height="10.816" viewBox="0 0 17.232 10.816">
+                                            <path d="M77.909,919.169a9.418,9.418,0,0,1,1.775-2.539,8.915,8.915,0,0,1,4.886-2.617,10.281,10.281,0,0,1,5.131.31,8.979,8.979,0,0,1,4.117,2.805,9.548,9.548,0,0,1,1.322,2.041v.134a9.361,9.361,0,0,1-1.111,1.78A9.092,9.092,0,0,1,88.5,924.46a10.469,10.469,0,0,1-2.594.163,9.134,9.134,0,0,1-5.555-2.16,9.281,9.281,0,0,1-2.389-3.071c-.015-.03-.033-.059-.049-.088Zm8.552,4.347a8.969,8.969,0,0,0,1.676-.124,8.06,8.06,0,0,0,5.72-4.026.232.232,0,0,0,0-.263,8.191,8.191,0,0,0-2.869-2.966,9.114,9.114,0,0,0-8.129-.419,8.135,8.135,0,0,0-3.674,3.412.183.183,0,0,0,0,.2,8.106,8.106,0,0,0,3.424,3.3A8.34,8.34,0,0,0,86.461,923.516Z" transform="translate(-77.909 -913.826)" fill="#fff"/>
+                                            <path d="M91.076,921.02c.075-.072.12-.112.163-.154.658-.658,1.319-1.314,1.971-1.977.113-.115.181-.109.279.008a3.161,3.161,0,0,1,.607,3.315,3.1,3.1,0,0,1-2.549,2.064,3.249,3.249,0,0,1-1.127-6.4,2.979,2.979,0,0,1,.467-.055c.148-.008.194.045.193.193-.005.908,0,1.816,0,2.724Z" transform="translate(-82.447 -915.656)" fill="#fff"/>
+                                        </svg>
+                                        | 234
+                        a(href="").btn.btn_block Другие новости
+                        .contacts-block
+                            a(href="").contacts-block__site
+                                img(src="assets/img/logo.svg", alt="")
+                                span.contacts-block__site-headline Сайт Пермского муниципального района
+                            .contacts-block__soc
+                                span.contacts-block__soc-headline Мы в соцсетях
+                                +soc-list
+                    div
+                        ul
+                            +aside-link("Контрольно – счётная палата Пермского муниципального района", "assets/img/aside-link-icon_01.svg")
+                            +aside-link("Молодежный парламент", "assets/img/aside-link-icon_02.svg")
+                            +aside-link("Противодействие коррупции", "assets/img/aside-link-icon_03.svg")
+                            +aside-link("Принятые правовые акты", "assets/img/aside-link-icon_04.svg")
+                            +aside-link("Медиаматериалы", "assets/img/aside-link-icon_05.svg")
+                .partner-block
+                    h2.block-headline Наши партнёры
+                    .partner-slider.js--partner-slider
+                        .partner-slider__item
+                            a(href="http://arhivpr.ru/")
+                                img(src="assets/img/partner(1).jpg", alt="")
+                        .partner-slider__item
+                            a(href="https://www.gosuslugi.ru/")
+                                img(src="assets/img/partner(2).jpg", alt="")
+                        .partner-slider__item
+                            a(href="https://zhit-vmeste.ru/")
+                                img(src="assets/img/partner(3).jpg", alt="")
+                        .partner-slider__item
+                            a(href="https://vmeste.permkrai.ru/")
+                                img(src="assets/img/partner(4).jpg", alt="")
+                        .partner-slider__item
+                            a(href="")
+                                img(src="assets/img/partner(5).jpg", alt="")
+                        .partner-slider__item
+                            a(href="")
+                                img(src="assets/img/partner(6).jpg", alt="")
+                        .partner-slider__item
+                            a(href="https://gazetaniva-perm.ru/")
+                                img(src="assets/img/partner(7).jpg", alt="")
+            .feedback-form-wrapper
+                .container
+                    form(action="").feedback-form
+                        div.feedback-form__inputs
+                            label.input-default
+                                input(type="text", placeholder="Ваше имя *", required)
+                            label.input-default
+                                input(type="tel", placeholder="Ваш телефон *", required)
+                            label.input-default
+                                input(type="email", placeholder="Ваш e-mail *", required)
+                        div.feedback-form__comment
+                            textarea(name="", cols="30", rows="10", placeholder="Введите Ваше сообщение *", required).textarea-default
+                        div.feedback-form__final
+                            h3.feedback-form__headline Задайте свой вопрос
+                            .feedback-form__policy-conf-wrapper
+                                label.feedback-form__policy-conf
+                                    input(type="checkbox", name="")
+                                    div
+                                span.feedback-form__policy-conf-text Нажимая на кнопку отправить вы соглашаетесь с нашей 
+                                    a(href="") политикой конфиденциальности
+                            input(type="submit", value="Отправить").btn.btn_wide
+
+        footer
