@@ -32,7 +32,7 @@
 
 @font-face {
     font-family: "Whitney";
-    src: url("../fonts/Whitney-Black-ProGkCy.otf.otf") format("opentype");
+    src: url("../fonts/Whitney-Black-ProGkCy.otf") format("opentype");
     font-weight: 900;
 }
 
@@ -44,7 +44,6 @@
 
 .content-with-aside {
     display: flex;
-    margin-right: 28px;
 
     & > div {
 
@@ -200,6 +199,10 @@
 .contacts-block {
     display: flex;
     margin: 0 -14px;
+
+    @media (max-width: 992px) {
+        flex-wrap: wrap;
+    }
 }
 
 .contacts-block__site {
@@ -225,6 +228,12 @@
             color: @blue;
         }
     }
+
+    @media (max-width: 992px) {
+        min-height: 80px;
+        padding: 24px 40px;
+        width: calc(100% - 28px);
+    }
 }
 
 .contacts-block__site-headline {
@@ -243,6 +252,11 @@
     margin: 0 14px 28px;
     min-height: 200px;
     width: calc(50% - 28px);
+
+    @media (max-width: 992px) {
+        min-height: 80px;
+        width: calc(100% - 28px);
+    }
 }
 
 .contacts-block__soc-headline {
@@ -289,12 +303,12 @@
         z-index: 3;
 
         &.slick-prev {
-            left: 0;
+            left: 5px;
             transform: rotate(-45deg);
         }
 
         &.slick-next {
-            right: 0;
+            right: 5px;
             transform: rotate(135deg);
         }
 
@@ -335,6 +349,10 @@
 
 .feedback-form {
     display: flex;
+
+    @media (max-width: 992px) {
+        flex-wrap: wrap;
+    }
 }
 
 .feedback-form__inputs {
@@ -358,17 +376,28 @@
         height: 100%;
         width: 100%;
     }
+
+    @media (max-width: 992px) {
+        margin: 0 0 0 28px;
+        width: calc(100% - 268px);
+    }
 }
 
 .feedback-form__final {
+    background: url(../img/question.png);
+    background-position: 0px -43px;
+    background-repeat: no-repeat;
     justify-content: space-between;
     display: flex;
     flex-direction: column;
     min-width: 360px;
+    position: relative;
     width: 360px;
 
-    .btn.btn_block {
-        
+    @media (max-width: 992px) {
+        background: none;
+        height: 120px;
+        margin: 24px auto 0;
     }
 }
 
@@ -376,6 +405,21 @@
     .f-ekib();
     font-size: 1.6875rem;
     font-weight: 400;
+
+    @media (max-width: 992px) {
+        display: none;
+    }
+
+    &.feedback-form__headline_mobile {
+        display: none;
+        margin-bottom: 24px;
+        text-align: center;
+        width: 100%;
+
+        @media (max-width: 992px) {
+            display: block;
+        }
+    }
 }
 
 .feedback-form__policy-conf-wrapper {
@@ -383,6 +427,10 @@
     display: flex;
     margin: 0 0 0 auto;
     max-width: 300px;
+
+    @media (max-width: 992px) {
+        max-width: none;
+    }
 }
 
 .feedback-form__policy-conf {
@@ -442,3 +490,87 @@
         }
     }
 }
+
+.deputies-slider-wrapper {
+    margin-bottom: 40px;
+}
+
+.deputies-slider {
+    height: 300px;
+    position: relative;
+    width: 100%;
+}
+
+.deputies-slider__item {
+    cursor: pointer;
+    display: block;
+    height: 225px;
+    object-fit: cover;
+    width: 225px;
+}
+
+.deputies-description {
+    bottom: 0;
+    left: 50%;
+    max-width: 225px;
+    position: absolute;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.deputies-slider__name {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.deputies-slider__region {
+    display: block;
+    font-size: 0.8125rem;
+}
+
+.deputies-slider__prev {
+    background: transparent;
+    border: none;
+    border-radius: 2px;
+    border-left: 3px solid @blue;
+    border-top: 3px solid @blue;
+    font-size: 0;
+    height: 25px;
+    position: absolute;
+    top: calc(50% - 10px);
+    transform: translateY(-50%);
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    width: 25px;
+    z-index: 3;
+
+    left: 5px;
+    transform: rotate(-45deg);
+}
+
+.deputies-slider__next {
+    background: transparent;
+    border: none;
+    border-radius: 2px;
+    border-left: 3px solid @blue;
+    border-top: 3px solid @blue;
+    font-size: 0;
+    height: 25px;
+    position: absolute;
+    top: calc(50% - 10px);
+    transform: translateY(-50%);
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    width: 25px;
+    z-index: 3;
+
+    right: 5px;
+    transform: rotate(135deg);
+}
+

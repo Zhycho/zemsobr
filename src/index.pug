@@ -7,7 +7,6 @@ doctype html
 html(lang="ru")
     head
         include ./templates/head/head.pug
-        
     body
         header
             include ./templates/header/header.pug
@@ -41,6 +40,24 @@ html(lang="ru")
                             .contacts-block__soc
                                 span.contacts-block__soc-headline Мы в соцсетях
                                 +soc-list
+                        .deputies-slider-wrapper
+                            h2.block-headline Депутаты
+                            #deputies-slider.deputies-slider
+                                a(href="#")
+                                    img(src="assets/img/deputy.jpg", alt="", data-deputname="Федотов Иван Сергеевич", data-deputregion="Округ №15").deputies-slider__item#rte
+                                a(href="#")    
+                                    img(src="assets/img/deputy.jpg", alt="", data-deputname="Федотов Иван Сергеевич", data-deputregion="Округ №3").deputies-slider__item
+                                a(href="#")
+                                    img(src="assets/img/deputy.jpg", alt="", data-deputname="Федотов Иван Сергеевич", data-deputregion="Округ №6").deputies-slider__item
+                                a(href="#")
+                                    img(src="assets/img/deputy.jpg", alt="", data-deputname="Федотов Иван Сергеевич", data-deputregion="Округ №1").deputies-slider__item
+                                a(href="#")
+                                    img(src="assets/img/deputy.jpg", alt="", data-deputname="Федотов Иван Сергеевич", data-deputregion="Округ №9").deputies-slider__item
+                                #deputies-description.deputies-description
+                                    span.deputies-slider__name 
+                                    span.deputies-slider__region
+                                button.deputies-slider__prev.js--deputies-slider__prev
+                                button.deputies-slider__next.js--deputies-slider__next
                     div
                         ul
                             +aside-link("Контрольно – счётная палата Пермского муниципального района", "assets/img/aside-link-icon_01.svg")
@@ -48,6 +65,7 @@ html(lang="ru")
                             +aside-link("Противодействие коррупции", "assets/img/aside-link-icon_03.svg")
                             +aside-link("Принятые правовые акты", "assets/img/aside-link-icon_04.svg")
                             +aside-link("Медиаматериалы", "assets/img/aside-link-icon_05.svg")
+                        #calendar
                 .partner-block
                     h2.block-headline Наши партнёры
                     .partner-slider.js--partner-slider
@@ -64,10 +82,10 @@ html(lang="ru")
                             a(href="https://vmeste.permkrai.ru/")
                                 img(src="assets/img/partner(4).jpg", alt="")
                         .partner-slider__item
-                            a(href="")
+                            a(href="http://www.zsperm.ru/")
                                 img(src="assets/img/partner(5).jpg", alt="")
                         .partner-slider__item
-                            a(href="")
+                            a(href="http://permraion.ru/")
                                 img(src="assets/img/partner(6).jpg", alt="")
                         .partner-slider__item
                             a(href="https://gazetaniva-perm.ru/")
@@ -75,6 +93,7 @@ html(lang="ru")
             .feedback-form-wrapper
                 .container
                     form(action="").feedback-form
+                        h3.feedback-form__headline.feedback-form__headline_mobile Задайте свой вопрос
                         div.feedback-form__inputs
                             label.input-default
                                 input(type="text", placeholder="Ваше имя *", required)
@@ -88,10 +107,10 @@ html(lang="ru")
                             h3.feedback-form__headline Задайте свой вопрос
                             .feedback-form__policy-conf-wrapper
                                 label.feedback-form__policy-conf
-                                    input(type="checkbox", name="")
+                                    input(type="checkbox", name="", checked, required)
                                     div
                                 span.feedback-form__policy-conf-text Нажимая на кнопку отправить вы соглашаетесь с нашей 
                                     a(href="") политикой конфиденциальности
                             input(type="submit", value="Отправить").btn.btn_wide
-
         footer
+            include ./templates/footer/footer.pug
