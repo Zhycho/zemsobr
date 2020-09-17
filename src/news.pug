@@ -3,6 +3,7 @@ include ./mixins/breadcrumbs/breadcrumbs.pug
 include ./mixins/article-card/article-card.pug
 include ./mixins/filter/filter.pug
 include ./mixins/articles-nav/articles-nav.pug
+include ./mixins/bunner/bunner.pug
 
 doctype html
 html(lang="ru")
@@ -20,16 +21,18 @@ html(lang="ru")
                             h1.block-headline Новости
                             +filter("filter_mobile")
                             ul.page-news-list
-                                +article-card()
-                                +article-card()
-                                +article-card()
-                                +article-card()
-                                +article-card()
-                                +article-card()
+                                +article-card("article-cap.jpg")
+                                +article-card("article_01.jpg")
+                                +article-card("article_02.jpg")
+                                +article-card("article_03.jpg")
+                                +article-card("article_04.jpg")
+                                +article-card("article_01.jpg")
                             a(href="").btn.btn_block Показать больше
                             +articles-nav
                         div
                             +filter
+                            +bunner
+                            +bunner
 
             include ./templates/mobile-menu/mobile-menu.pug
         footer

@@ -1,0 +1,48 @@
+@import '../../style/_variables.less';
+
+.deputy {
+    align-items: center;
+    display: flex;
+    position: relative;
+    .trans();
+
+    &:hover {
+        background-color: @gray;
+
+        .deputy__surname {
+            color: @blue;
+        }
+    }
+}
+
+.deputy__img {
+
+    img {
+        display: block;
+        height: 90px;
+        object-fit: cover;
+        width: 90px;
+    }
+}
+
+.deputy__info {
+    padding: 16px;
+}
+
+.deputy__surname {
+    display: block;
+    font-weight: 600;
+    .trans();
+}
+
+.deputy__name {
+    display: block;
+    font-weight: 500;
+    font-size: 0.875rem;
+    margin-bottom: 8px;
+}
+
+.deputy__region {
+    display: block;
+    font-size: 0.8125rem;
+}

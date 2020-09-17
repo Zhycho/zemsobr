@@ -1,0 +1,5 @@
+mixin document(title, srcOfImage = "file-icon.png")
+    li.document
+        img(src="assets/img/" + srcOfImage, alt="").document__icon
+        h3.document__headline= title
+        a(href="").link-block

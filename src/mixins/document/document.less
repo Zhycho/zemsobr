@@ -1,0 +1,32 @@
+@import '../../style/_variables.less';
+
+.document {
+    align-items: flex-start;
+    background-color: @gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    position: relative;
+    .trans();
+
+    &:hover {
+        background-color: @blue;
+
+        .document__headline {
+            color: #FFF;
+        }
+    }
+}
+
+.document__icon {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.document__headline {
+    .f-ekib();
+    font-size: 1.25rem;
+    font-weight: 400;
+    .trans();
+}

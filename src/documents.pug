@@ -2,6 +2,9 @@ include ./mixins/icons/icons.pug
 include ./mixins/soc-list/soc-list.pug
 include ./mixins/breadcrumbs/breadcrumbs.pug
 include ./mixins/file/file.pug
+include ./mixins/bunner/bunner.pug
+include ./mixins/document/document.pug
+include ./mixins/share-line/share-line.pug
 
 doctype html
 html(lang="ru")
@@ -17,8 +20,18 @@ html(lang="ru")
                         div
                             +breadcrumbs("Документы")
                             h1.block-headline Документы
+                            ul.documents-list
+                                +document("На уровень выше", "directory-icon.png")
+                                +document("Законодательство Пермского края")
+                                +document("Законодательство Пермского края")
+                                +document("Законодательство Пермского края")
+                                +document("Законодательство Пермского края")
+                                +document("Законодательство Пермского края")
+                                +document("Законодательство Пермского края")
+                            h2.block-headline Документы
                             +file
                             +file
+                            +share-line
                         div
                             form(action="").file-searcher
                                 h3.file-searcher__healine Поиск документов
@@ -27,7 +40,8 @@ html(lang="ru")
                                         input(type="submit", value="")
                                         +icon-search
                                     input(type="search", name="", placeholder="Поиск").file-searcher__input
-
+                            +bunner
+                            +bunner
                             
 
             include ./templates/mobile-menu/mobile-menu.pug

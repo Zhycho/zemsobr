@@ -767,6 +767,35 @@
 
 // Страница документов
 
+.documents-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -14px;
+
+    .document {
+        margin: 0 14px 28px;
+        width: calc(33.33% - 28px);
+    }
+
+    @media (max-width: 1200px) {
+        .document {
+            width: calc(50% - 28px);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .document {
+            width: calc(50% - 28px);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .document {
+            width: calc(100% - 28px);
+        }
+    }
+}
+
 .file-searcher {
     background-color: @gray;
     margin-bottom: 28px;
@@ -787,6 +816,7 @@
 
 .file-searcher__submit {
     align-items: center;
+    border: 1px solid #FFF;
     cursor: pointer;
     display: flex;
     fill: @blue;
@@ -816,4 +846,43 @@
     font-size: 0.875rem;
     padding: 0 4px;
     width: 100%;
+}
+
+// Страница депутатов
+
+.deputies-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -34px;
+
+    .deputy {
+        margin: 0 34px 68px;
+        width: calc(33.33% - 68px);
+    }
+
+    @media (max-width: 1200px) {
+        margin: 0 -20px;
+
+        .deputy {
+            margin: 0 20px 40px;
+            width: calc(33.33% - 40px);
+        }
+    }
+
+    @media (max-width: 992px) {
+        margin: 0 -14px;
+
+        .deputy {
+            margin: 0 14px 28px;
+            width: calc(50% - 28px);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .deputy {
+            margin: 0 auto 28px;
+            max-width: 240px;
+            width: calc(100% - 28px);
+        }
+    }
 }

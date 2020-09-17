@@ -41,8 +41,9 @@
 }
 
 .file__headline {
+    align-items: start;
     color: @black;
-    display: block;
+    display: flex;
     font-size: 1.125rem;
     font-weight: 700;
     .f-ekib();
@@ -54,6 +55,11 @@
 
     @media (max-width: 480px) {
         font-size: 0.875rem;
+    }
+
+    img {
+        display: block;
+        margin-right: 12px;
     }
 }
 
