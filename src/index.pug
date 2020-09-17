@@ -26,7 +26,7 @@ html(lang="ru")
                             .main-article__info
                                 a(href="").main-article__link Принято решение о досрочном сложении полномочий главы Пермского района
                                 .main-article__info-detail
-                                    time(datetime="2001-05-15 23:39").main-article__time Вчера 23:39
+                                    time(datetime="2001-05-15 23:39").main-article__time.js--time 2020-09-13 12:30
                                     span.main-article__views 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="17.232" height="10.816" viewBox="0 0 17.232 10.816">
                                             <path d="M77.909,919.169a9.418,9.418,0,0,1,1.775-2.539,8.915,8.915,0,0,1,4.886-2.617,10.281,10.281,0,0,1,5.131.31,8.979,8.979,0,0,1,4.117,2.805,9.548,9.548,0,0,1,1.322,2.041v.134a9.361,9.361,0,0,1-1.111,1.78A9.092,9.092,0,0,1,88.5,924.46a10.469,10.469,0,0,1-2.594.163,9.134,9.134,0,0,1-5.555-2.16,9.281,9.281,0,0,1-2.389-3.071c-.015-.03-.033-.059-.049-.088Zm8.552,4.347a8.969,8.969,0,0,0,1.676-.124,8.06,8.06,0,0,0,5.72-4.026.232.232,0,0,0,0-.263,8.191,8.191,0,0,0-2.869-2.966,9.114,9.114,0,0,0-8.129-.419,8.135,8.135,0,0,0-3.674,3.412.183.183,0,0,0,0,.2,8.106,8.106,0,0,0,3.424,3.3A8.34,8.34,0,0,0,86.461,923.516Z" transform="translate(-77.909 -913.826)" fill="#fff"/>
@@ -97,7 +97,7 @@ html(lang="ru")
                         h3.feedback-form__headline.feedback-form__headline_mobile Задайте свой вопрос
                         div.feedback-form__inputs
                             label.input-default
-                                input(type="text", placeholder="Ваше имя *", required)
+                                input(type="text", placeholder="Ваше имя *", required, pattern="^[А-Яа-яЁё\s]+$")
                             label.input-default
                                 input(type="tel", placeholder="Ваш телефон *", required)
                             label.input-default

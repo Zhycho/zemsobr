@@ -13,6 +13,7 @@
 		<script src="assets/js/jquery.mmenu.all.min.js"></script>
 		<script src="assets/js/caleandar.js"></script>
 		<script src="assets/js/jquery.waterwheelCarousel.min.js"></script>
+		<script src="assets/js/moment-with-locales.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 		<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
 		<script src="https://yastatic.net/share2/share.js"></script>
@@ -193,7 +194,7 @@
 						<div class="main-article"><img src="assets/img/main-article.jpg" alt=""><span class="main-article__label">Главная новость</span>
 							<div class="main-article__info"><a class="main-article__link" href="">Принято решение о досрочном сложении полномочий главы Пермского района</a>
 								<div class="main-article__info-detail">
-									<time class="main-article__time" datetime="2001-05-15 23:39">Вчера 23:39</time><span class="main-article__views">
+									<time class="main-article__time js--time" datetime="2001-05-15 23:39">2020-09-13 12:30</time><span class="main-article__views">
 										 <svg xmlns="http://www.w3.org/2000/svg" width="17.232" height="10.816" viewBox="0 0 17.232 10.816">
 <path d="M77.909,919.169a9.418,9.418,0,0,1,1.775-2.539,8.915,8.915,0,0,1,4.886-2.617,10.281,10.281,0,0,1,5.131.31,8.979,8.979,0,0,1,4.117,2.805,9.548,9.548,0,0,1,1.322,2.041v.134a9.361,9.361,0,0,1-1.111,1.78A9.092,9.092,0,0,1,88.5,924.46a10.469,10.469,0,0,1-2.594.163,9.134,9.134,0,0,1-5.555-2.16,9.281,9.281,0,0,1-2.389-3.071c-.015-.03-.033-.059-.049-.088Zm8.552,4.347a8.969,8.969,0,0,0,1.676-.124,8.06,8.06,0,0,0,5.72-4.026.232.232,0,0,0,0-.263,8.191,8.191,0,0,0-2.869-2.966,9.114,9.114,0,0,0-8.129-.419,8.135,8.135,0,0,0-3.674,3.412.183.183,0,0,0,0,.2,8.106,8.106,0,0,0,3.424,3.3A8.34,8.34,0,0,0,86.461,923.516Z" transform="translate(-77.909 -913.826)" fill="#fff"/>
 <path d="M91.076,921.02c.075-.072.12-.112.163-.154.658-.658,1.319-1.314,1.971-1.977.113-.115.181-.109.279.008a3.161,3.161,0,0,1,.607,3.315,3.1,3.1,0,0,1-2.549,2.064,3.249,3.249,0,0,1-1.127-6.4,2.979,2.979,0,0,1,.467-.055c.148-.008.194.045.193.193-.005.908,0,1.816,0,2.724Z" transform="translate(-82.447 -915.656)" fill="#fff"/>
@@ -305,7 +306,7 @@
 						<h3 class="feedback-form__headline feedback-form__headline_mobile">Задайте свой вопрос</h3>
 						<div class="feedback-form__inputs">
 							<label class="input-default">
-								<input type="text" placeholder="Ваше имя *" required>
+								<input type="text" placeholder="Ваше имя *" required pattern="^[А-Яа-яЁёs]+$">
 							</label>
 							<label class="input-default">
 								<input type="tel" placeholder="Ваш телефон *" required>

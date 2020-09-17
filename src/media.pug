@@ -1,0 +1,38 @@
+include ./mixins/soc-list/soc-list.pug
+include ./mixins/breadcrumbs/breadcrumbs.pug
+include ./mixins/bunner/bunner.pug
+include ./mixins/articles-nav/articles-nav.pug
+include ./mixins/media/media-img.pug
+include ./mixins/media/media-video.pug
+
+doctype html
+html(lang="ru")
+    head
+        include ./templates/head/head.pug
+    body
+        header
+            include ./templates/header/header.pug
+        main
+            .not-index-page
+                .container
+                    .content-with-aside
+                        div
+                            +breadcrumbs("Документы")
+                            h1.block-headline Медиаматериалы
+                            ul.media-list
+                                +media-img("media-gallery_01")
+                                +media-video
+                                +media-img("media-gallery_02")
+                                +media-video
+                                +media-img("media-gallery_01")
+                                +media-video
+                                +media-img("media-gallery_02")
+                                +media-video
+                            a(href="").btn.btn_block Показать больше
+                            +articles-nav
+                        div
+                            +bunner
+                            +bunner
+            include ./templates/mobile-menu/mobile-menu.pug
+        footer
+            include ./templates/footer/footer.pug
