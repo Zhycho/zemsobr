@@ -1,0 +1,89 @@
+include ./mixins/soc-list/soc-list.pug
+include ./mixins/breadcrumbs/breadcrumbs.pug
+include ./mixins/bunner/bunner.pug
+include ./mixins/share-line/share-line.pug
+
+
+doctype html
+html(lang="ru")
+    head
+        include ./templates/head/head.pug
+    body
+        header
+            include ./templates/header/header.pug
+        main
+            .not-index-page
+                .container
+                    .content-with-aside
+                        div
+                            +breadcrumbs("Авдеев Александр Александрович")
+                            h1.block-headline Авдеев Александр Александрович
+                            .deputy-page
+                                .deputy-page__img
+                                    img(src="assets/img/deputy-small.jpg", alt="")
+                                .deputy-page__info
+                                    div
+                                        span.deputy-page__surname Федотов
+                                        span.deputy-page__name Иван Сергеевич
+                                    .deputy-page__description
+                                        span Родился 24 сентября 1984 года
+                                        span Избран по избирательному округу № 14
+                                    .deputy-page__soc
+                                        span Социальные сети:
+                                        +soc-list
+                            .deputy-tabs(role="tablist")
+                                div
+                                    button.deputy-tabs__item.js--deputy-tabs__item(role="tab").active О депутате
+                                div
+                                    button.deputy-tabs__item.js--deputy-tabs__item(role="tab") Депутатский приём
+                            .deputy-tabs-content
+                                .deputy-tabs-content__item.js--deputy-tabs-content__item.active(role="tabpanel")
+                                    ul.deputy-info-list
+                                        li
+                                            span.deputy-info-list__point Должность:
+                                            span.deputy-info-list__description Депутат Земского Собрания Пермского муниципального района Пермского края двух созывов (шестого и седьмого).
+                                        li
+                                            span.deputy-info-list__point Окончил(а):
+                                            span.deputy-info-list__description Образование – высшее. Пермский педагогический институт в 1984 году, специальность – учитель физики и математики средней школы.
+                                        li
+                                            span.deputy-info-list__point Семейное положение, наличие детей:
+                                            span.deputy-info-list__description Образование – высшее. Пермский педагогический институт в 1984 году, специальность – учитель физики и математики средней школы.
+                                        li
+                                            span.deputy-info-list__point Служебный телефон:
+                                            span.deputy-info-list__description
+                                                a(href="tel:+79999999999") + 7 (999) 999-99-99
+                                        li
+                                            span.deputy-info-list__point E-mail:
+                                            span.deputy-info-list__description
+                                                a(href="mailto:no-reply@zmsbr.ru") no-reply@zmsbr.ru
+                                    .deputy-info-content
+                                        p
+                                            strong Избирательный округ №15 
+                                            | образован в границах Усть-Качкинского и Заболотского сельских поселений: населенные пункты Заболотского сельского поселения: д.Алексики, д.Большакино, д.Буланки, д.Ванькино, д.Васильевка, д.Верх-Речка, д.Горшки, д.Демино, д.Заболото, д.Зубки, д.Коляды, д.Коммуна, с.Новоильинское, д.Ольховка, д.Петряхино, д.Растягаево, д.Серяк, д.Суздалы, д.Трухинята д.Тишкино, д.Хмелевка, д.Шугуровка; населенные пункты Усть-Качкинского сельского поселения: д.Гамы, д.Дворцовая Слудка, д.Заозерье, д.Качка, п. Красный Восход, д.Луговая, д. Моргали, д.Одина.
+                                        p
+                                            strong В округе функционируют общественные приёмные:
+                                        ul
+                                            li Кондратво, ул. Културы 5а, тел +7 (999) 999-99-99
+                                            li Кондратво, ул. Културы 5а, тел +7 (999) 999-99-99
+                                            li Кондратво, ул. Културы 5а, тел +7 (999) 999-99-99
+                                            li Кондратво, ул. Културы 5а, тел +7 (999) 999-99-99
+                                        p
+                                            strong Помощники:
+                                        ul
+                                            li Иванов Фёдор Викторович, +7 (999) 999-99-99
+                                            li Иванов Фёдор Викторович, +7 (999) 999-99-99
+                                .deputy-tabs-content__item.js--deputy-tabs-content__item(role="tabpanel")
+                                    .deputy-info-content
+                                        p
+                                            strong Избирательный округ №15 
+                                            | образован в границах Усть-Качкинского и Заболотского сельских поселений: населенные пункты Заболотского сельского поселения: д.Алексики, д.Большакино, д.Буланки, д.Ванькино, д.Васильевка, д.Верх-Речка, д.Горшки, д.Демино, д.Заболото, д.Зубки, д.Коляды, д.Коммуна, с.Новоильинское, д.Ольховка, д.Петряхино, д.Растягаево, д.Серяк, д.Суздалы, д.Трухинята д.Тишкино, д.Хмелевка, д.Шугуровка; населенные пункты Усть-Качкинского сельского поселения: д.Гамы, д.Дворцовая Слудка, д.Заозерье, д.Качка, п. Красный Восход, д.Луговая, д. Моргали, д.Одина.
+                                        p
+                                            strong Избирательный округ №15 
+                                            | образован в границах Усть-Качкинского и Заболотского сельских поселений: населенные пункты Заболотского сельского поселения: д.Алексики, д.Большакино, д.Буланки, д.Ванькино, д.Васильевка, д.Верх-Речка, д.Горшки, д.Демино, д.Заболото, д.Зубки, д.Коляды, д.Коммуна, с.Новоильинское, д.Ольховка, д.Петряхино, д.Растягаево, д.Серяк, д.Суздалы, д.Трухинята д.Тишкино, д.Хмелевка, д.Шугуровка; населенные пункты Усть-Качкинского сельского поселения: д.Гамы, д.Дворцовая Слудка, д.Заозерье, д.Качка, п. Красный Восход, д.Луговая, д. Моргали, д.Одина.
+                            +share-line
+                        div
+                            +bunner
+                            +bunner
+            include ./templates/mobile-menu/mobile-menu.pug
+        footer
+            include ./templates/footer/footer.pug

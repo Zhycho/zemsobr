@@ -99,6 +99,16 @@ $(document).ready(function() {
         depSlider.next();
     });
 
+
+    // табы на странице депутата
+    $('.js--deputy-tabs__item').click( function() {
+        $('.js--deputy-tabs__item').removeClass('active');
+        $(this).addClass('active');
+
+        $('.js--deputy-tabs-content__item').removeClass('active');
+        $('.js--deputy-tabs-content__item').eq($(this).index($('.js--deputy-tabs__item'))).addClass('active');
+    });
+
     // MMenu
     let $menu = $("#mobile-burger-menu").mmenu({
         "navbars": [

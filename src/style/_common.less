@@ -886,3 +886,259 @@
         }
     }
 }
+
+// Страница депутата
+
+.deputy-page {
+    display: flex;
+    margin-bottom: 40px;
+
+    @media (max-width: 480px) {
+        display: block;
+    }
+}
+
+.deputy-page__img {
+    margin-right: 28px;
+
+    img {
+        display: block;
+        height: 200px;
+        object-fit: cover;
+        width: 200px;
+    }
+
+    @media (max-width: 480px) {
+        margin-bottom: 12px;
+        margin-right: 0;
+
+        img {
+            margin: 0 auto;
+        }
+    }
+}
+
+.deputy-page__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.deputy-page__surname {
+    display: block;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.deputy-page__name {
+    display: block;
+    font-size: 0.875rem;
+    line-height: 24px;
+}
+
+.deputy-page__description {
+    font-size: 0.875rem;
+    line-height: 24px;
+
+    span {
+        display: block;
+    }
+}
+
+.deputy-page__soc {
+
+    span {
+        border-top: 1px solid @blue;
+        color: @blue;
+        display: inline-block;
+        font-size: 0.75rem;
+        padding-top: 12px;
+    }
+
+    .soc-list {
+        margin-left: -12px;
+    }
+
+    .soc-list__item {
+
+        a {
+            fill: @blue;
+        }
+    }
+}
+
+.deputy-tabs {
+    display: flex;
+    margin-bottom: 36px;
+
+    & > div {
+
+        &:nth-of-type(1) {
+            margin-right: 28px;
+            min-width: 200px;
+            width: 200px;
+        }
+
+        &:nth-of-type(2) {
+            width: calc(100% - 228px);
+        }
+    }
+
+    @media (max-width: 480px) {
+        margin-bottom: 24px;
+
+        & > div {
+
+            &:nth-of-type(1) {
+                margin-right: 20px;
+                min-width: 100px;
+                width: 100px;
+            }
+
+            &:nth-of-type(2) {
+                width: calc(100% - 120px);
+            }
+        }
+    }
+}
+
+.deputy-tabs__item {
+    background: transparent;
+    border: none;
+    color: rgba(13, 12, 36, 0.5);
+    .f-ekib();
+    font-size: 1.25rem;
+    padding: 0 0 8px;
+    position: relative;
+    .trans();
+    white-space: nowrap;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 51%;
+        right: 51%;
+        bottom: 0;
+        background: @blue;
+        height: 4px;
+        -webkit-transition-property: left, right;
+        transition-property: left, right;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    &:hover {
+        color: @black;
+
+        &::before {
+            left: 0;
+            right: 0;
+        } 
+    }
+
+    &.active {
+        color: @black;
+
+        &::before {
+            left: 0;
+            right: 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1rem;
+    }
+}
+
+.deputy-tabs-content__item {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.deputy-info-list {
+    border-bottom: 1px solid rgba(112, 112, 112, 0.2);
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+
+    li {
+        display: flex;
+        margin-bottom: 28px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.deputy-info-list__point {
+    .f-ekib();
+    font-weight: 700;
+    margin-right: 28px;
+    min-width: 200px;
+    width: 200px;
+
+    @media (max-width: 480px) {
+        margin-right: 20px;
+        min-width: 100px;
+        width: 100px;
+    }
+}
+
+.deputy-info-list__description {
+    font-size: 0.875rem;
+    width: calc(100% - 228px);
+
+    a {
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @media (max-width: 480px) {
+        width: calc(100% - 120px);
+    }
+}
+
+.deputy-info-content {
+    font-size: 0.875rem;
+    line-height: 24px;
+    margin-bottom: 28px;
+
+    strong {
+        font-weight: 600;
+    }
+
+    p {
+        margin-bottom: 24px;
+    }
+
+    ul {
+        margin-bottom: 24px;
+
+        li {
+            margin-bottom: 8px;
+            padding-left: 28px;
+            position: relative;
+
+            &::before {
+                background-color: @blue;
+                border-radius: 50%;
+                content: "";
+                display: block;
+                height: 7px;
+                min-width: 7px;
+                left: 0;
+                position: absolute;
+                top: 8px;
+                width: 7px;
+            }
+        }
+    }
+}
