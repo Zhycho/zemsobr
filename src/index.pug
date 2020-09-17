@@ -7,6 +7,7 @@ doctype html
 html(lang="ru")
     head
         include ./templates/head/head.pug
+        script(src="assets/js/calendar-script.js")
     body
         header
             include ./templates/header/header.pug
@@ -59,7 +60,7 @@ html(lang="ru")
                                 button.deputies-slider__prev.js--deputies-slider__prev
                                 button.deputies-slider__next.js--deputies-slider__next
                     div
-                        ul
+                        ul.aside-link-list
                             +aside-link("Контрольно – счётная палата Пермского муниципального района", "assets/img/aside-link-icon_01.svg")
                             +aside-link("Молодежный парламент", "assets/img/aside-link-icon_02.svg")
                             +aside-link("Противодействие коррупции", "assets/img/aside-link-icon_03.svg")
@@ -112,5 +113,6 @@ html(lang="ru")
                                 span.feedback-form__policy-conf-text Нажимая на кнопку отправить вы соглашаетесь с нашей 
                                     a(href="") политикой конфиденциальности
                             input(type="submit", value="Отправить").btn.btn_wide
+            include ./templates/mobile-menu/mobile-menu.pug
         footer
             include ./templates/footer/footer.pug

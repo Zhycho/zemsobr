@@ -1,0 +1,35 @@
+include ./mixins/icons/icons.pug
+include ./mixins/soc-list/soc-list.pug
+include ./mixins/breadcrumbs/breadcrumbs.pug
+include ./mixins/file/file.pug
+
+doctype html
+html(lang="ru")
+    head
+        include ./templates/head/head.pug
+    body
+        header
+            include ./templates/header/header.pug
+        main
+            .not-index-page
+                .container
+                    .content-with-aside
+                        div
+                            +breadcrumbs("Документы")
+                            h1.block-headline Документы
+                            +file
+                            +file
+                        div
+                            form(action="").file-searcher
+                                h3.file-searcher__healine Поиск документов
+                                .file-searcher__wrapper
+                                    label.file-searcher__submit
+                                        input(type="submit", value="")
+                                        +icon-search
+                                    input(type="search", name="", placeholder="Поиск").file-searcher__input
+
+                            
+
+            include ./templates/mobile-menu/mobile-menu.pug
+        footer
+            include ./templates/footer/footer.pug

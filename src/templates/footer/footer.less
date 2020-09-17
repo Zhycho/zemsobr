@@ -16,6 +16,41 @@
     .soc-list {
         margin-bottom: 12px;
     }
+
+    @media (max-width: 768px) {
+        padding: 12px 0 32px;
+
+        .container {
+            flex-wrap: wrap;
+
+            & > div {
+                width: calc(33.33% - 24px);
+
+                &:last-of-type {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 auto;
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .container {
+    
+            & > div {
+                margin-right: 0;
+                width: 100%;
+
+                &:last-of-type {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
 }
 
 .footer-nav-title {
@@ -24,6 +59,10 @@
     font-size: 1.25rem;
     .f-ekib();
     margin-bottom: 28px;
+
+    @media (max-width: 480px) {
+        text-align: center;
+    }
 }
 
 .footer-nav-list {
@@ -42,6 +81,10 @@
         &:hover {
             text-decoration: underline;
         }
+    }
+
+    @media (max-width: 480px) {
+        text-align: center;
     }
 }
 
@@ -64,6 +107,13 @@
         display: block;
         margin-bottom: 12px;
     }
+
+    @media (max-width: 768px) {
+
+        a {
+            margin: 0 auto 24px;
+        }
+    }
 }
 
 .footer-old-site {
@@ -85,12 +135,33 @@
         display: flex;
         justify-content: space-between;
     }
+
+    @media (max-width: 768px) {
+        .container {
+            justify-content: center;
+        }
+    }
 }
 
 .footer-description {
     align-items: center;
     color: #FFF;
     display: flex;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.footer-description.footer-description_mobile {
+    border-bottom: 1px solid rgba(239, 243, 246, 0.4);
+    display: none;
+    margin-bottom: 20px;
+    padding: 0 15px 8px;
+
+    @media (max-width: 768px) {
+        display: flex;
+    }
 }
 
 .footer-description__logo {
@@ -102,11 +173,19 @@
     display: block;
     .f-ekib();
     font-weight: 700;
+
+    @media (max-width: 576px) {
+        font-size: 0.875rem;
+    }
 }
 
 .footer-description__little {
     display: block;
     font-size: 0.8125rem;
+
+    @media (max-width: 576px) {
+        font-size: 0.6875rem;
+    }
 }
 
 .footer-praweb {
